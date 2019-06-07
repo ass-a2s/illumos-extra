@@ -8,7 +8,7 @@
 # source.  A copy of the CDDL is also available via the Internet at
 # http://www.illumos.org/license/CDDL.
 #
-# Copyright (c) 2019, Joyent, Inc.
+# Copyright 2019 Joyent, Inc.
 
 #
 # Shared makefile for building GCC versions. For the most part, the build is the
@@ -21,9 +21,11 @@
 #
 SEPARATE_BUILD = yes
 
-GCC = /opt/local/bin/gcc
 CFLAGS = -g -O2
 PREFIX = /usr/gcc/$(GCC_VER)
+
+GCC = $(GCC.host)
+GXX = $(GXX.host)
 
 AUTOCONF_PREFIX = $(PREFIX)
 

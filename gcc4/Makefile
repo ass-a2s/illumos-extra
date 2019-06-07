@@ -20,7 +20,7 @@
 #
 # Copyright 2010 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
-# Copyright (c) 2018, Joyent, Inc.  All rights reserved.
+# Copyright 2019 Joyent, Inc.  All rights reserved.
 #
 
 include ../Makefile.defs
@@ -32,5 +32,7 @@ MPFR_TARBALL = $(MPFR_VER).tar.gz
 GMP_VER = gmp-5.1.1
 GXX = /bin/false
 CFLAGS = -nostdinc -isystem /usr/include -g -O2
+GCC.host = $(GCC4.host)
+GXX.host = /bin/false
 
 include ../Makefile.gcc
